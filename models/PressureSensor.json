@@ -1,0 +1,29 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:robot:digitalroboticarm:pressure_sensor;1",
+    "@type": "Interface",
+    "displayName": "Pressure Sensor Interface Model",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Id",
+            "schema": "string",
+            "description": "Sensor Id",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "Pressure",
+            "schema": "double",
+            "description": "Current measured pressure",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "PressureAlert",
+            "schema": "boolean",
+            "description": "outside of desired pressure alert",
+            "writable": true
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "@id": "dtmi:robot:digitalroboticarm;1",
+    "@type": "Interface",
+    "displayName": "Robotic Arm Interface Model",
+    "@context": "dtmi:dtdl:context;2",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Id",
+            "schema": "string",
+            "description": "Robotic Arm ID",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "RoboticArmLocation",
+            "schema": {
+                "@id": "dtmi:robot:digitalroboticarm:custom_schema:roboticarmlocation;1",
+                "@type": "Object",
+                "fields": [
+                    {
+                        "@id": "dtmi:robot:digitalroboticarm:custom_schema:roboticarmlocation:lat;1",
+                        "name": "Latitude",
+                        "schema": "double"
+                    },
+                    {
+                        "@id": "dtmi:robot:digitalroboticarm:custom_schema:roboticarmlocation:lon;1",
+                        "name": "Longitude",
+                        "schema": "double"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:robot:digitalroboticarm:rel_has_temperature_sensors;1",
+            "name": "rel_has_temperature_sensors",
+            "displayName": "Has temperature sensors",
+            "target": "dtmi:robot:digitalroboticarm:temperature_sensor;1"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:robot:digitalroboticarm:rel_has_pressure_sensors;1",
+            "name": "rel_has_pressure_sensors",
+            "displayName": "Has pressure sensors",
+            "target": "dtmi:robot:digitalroboticarm:pressure_sensor;1"
+        }
+    ]
+}
